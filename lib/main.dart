@@ -1,36 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/login_page.dart';
+
+import 'pages/homepage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyHome());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyHome extends StatefulWidget {
+  const MyHome({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyHome> createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> {
+
+  //bool theme = false;
+  // ThemeMode themeMode = ThemeMode.light;
+  // void change(bool value){
+  //   setState(() {
+  //     if(value==true){
+  //       themeMode = ThemeMode.dark;
+  //       theme = true;
+  //     }
+  //     else{
+  //       themeMode = ThemeMode.light;
+  //       theme = false;
+  //     }
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(brightness: Brightness.dark),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: const MyHomePage(),
+      title: 'Flutter Demo',
+      //actions: Widget[Switch(value: dark, onChanged: (value){changeColor(value);})],
+      initialRoute: "/login",
+      routes: {
+        "/" : (context) => const MyApp(),
+        "/login" : (context) => const LoginPage(),
+      },
     );
   }
 }
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-          child: Text(
-              "Loda ka's \" App bc",
-            style: TextStyle(fontSize: 40),
-          ),
-        ),
-    );
-  }
-}
