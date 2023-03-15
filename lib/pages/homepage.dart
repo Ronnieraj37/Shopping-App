@@ -51,47 +51,47 @@ class _MyAppState extends State<MyApp> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       backgroundColor: Themes.creamColor,
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: _currentIndex,
-        showElevation: true,
-        itemCornerRadius: 24,
-        curve: Curves.easeIn,
-        onItemSelected: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: <BottomNavyBarItem>[
-          BottomNavyBarItem(
-            icon: const Icon(Icons.apps),
-            title: const Text('Home'),
-            activeColor: Colors.red,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: const Icon(CupertinoIcons.bag_fill),
-            title: const Text(
-              'Orders',
-            ),
-            activeColor: Colors.teal,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: const Icon(CupertinoIcons.cart_fill),
-            title: const Text(
-              'Cart',
-            ),
-            activeColor: Themes.darkBluish,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            activeColor: Colors.blue,
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavyBar(
+      //   selectedIndex: _currentIndex,
+      //   showElevation: true,
+      //   itemCornerRadius: 24,
+      //   curve: Curves.easeIn,
+      //   onItemSelected: (index) {
+      //     setState(() {
+      //       _currentIndex = index;
+      //     });
+      //   },
+      //   items: <BottomNavyBarItem>[
+      //     BottomNavyBarItem(
+      //       icon: const Icon(Icons.apps),
+      //       title: const Text('Home'),
+      //       activeColor: Colors.red,
+      //       textAlign: TextAlign.center,
+      //     ),
+      //     BottomNavyBarItem(
+      //       icon: const Icon(CupertinoIcons.bag_fill),
+      //       title: const Text(
+      //         'Orders',
+      //       ),
+      //       activeColor: Colors.teal,
+      //       textAlign: TextAlign.center,
+      //     ),
+      //     BottomNavyBarItem(
+      //       icon: const Icon(CupertinoIcons.cart_fill),
+      //       title: const Text(
+      //         'Cart',
+      //       ),
+      //       activeColor: Themes.darkBluish,
+      //       textAlign: TextAlign.center,
+      //     ),
+      //     BottomNavyBarItem(
+      //       icon: const Icon(Icons.settings),
+      //       title: const Text('Settings'),
+      //       activeColor: Colors.blue,
+      //       textAlign: TextAlign.center,
+      //     ),
+      //   ],
+      // ),
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
