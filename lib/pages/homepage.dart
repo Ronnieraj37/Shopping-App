@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   loadData() async {
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 3));
     var catalogJson = await rootBundle.loadString("files/catalog.json");
     var decodeJson = jsonDecode(catalogJson);
     var productData = decodeJson["products"];
